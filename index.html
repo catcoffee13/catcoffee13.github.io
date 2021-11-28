@@ -1,1 +1,112 @@
-hello world
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            color:white;    
+            font-family: 'Segoe UI';   
+        }
+        
+        #names{
+            font-size: 40px;
+            float: right;
+        }
+
+        #clock{
+            font-size: 100px;
+
+        }
+
+        #weather{
+            font-size: 30px;
+        }
+
+        #memo{
+            font-size: 15px;
+            float:right;
+        }
+
+        #bot{
+            font-size: 30px;
+        }
+
+        #topbox{
+            display: flex;
+            height: 50%;
+            margin-top: 120px;
+        }
+
+        #box1{
+            flex:2;
+            margin-left: 100px;
+        }
+
+        #box2{            
+            flex:1;
+            margin-right: 100px;           
+        }
+
+        #middlebox{
+            height: 40%;
+            margin-top: 200px;
+            margin-right: 250px;
+        }
+
+        #botbox{
+            height: 8%;
+        }
+        .hidden{
+            display: none;
+        }
+
+        #name,#memosave{
+            height: 40px;
+            font-size: 20px;
+            background: transparent;
+            color:white;
+            border: none;
+            border-bottom: 2px solid white;
+        }
+
+        input::placeholder{
+            color:white;
+        }
+        button{
+            background-color:transparent;
+            border: none;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+<div id="topbox">
+    <div id="box1">
+        <div id="clock">00:00</div>
+        <div id="weather">위치정보 수집을 허락해 주세요.</div>
+    </div>
+
+    <div id="box2">
+        <div style="float: right;">
+            <form id="loginForm">
+                <input type="text" id="name"placeholder="Join"/>
+            </form>
+        </div>
+        <div id="names" class="hidden">name</div>
+    </div>
+</div>
+
+<div id ="middlebox">    
+    <div id="memo" class="hidden">
+        <form id="memoForm">
+            <input type="text" id="memosave" placeholder="Memo"/>
+        </form>
+        <ul id="memolist"></ul>
+    </div>
+</div>
+<script src="src/clock.js"></script>
+<script src="src/main.js"></script>
+<script src="src/memo.js"></script>
+<script src="src/weather.js"></script>
+</body>
+</html>
