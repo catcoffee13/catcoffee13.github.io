@@ -10,7 +10,7 @@ function onGeoOk(position) {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        weather.innerText = `${data.name}`+'\n'+`${data.weather[0].main} / ${data.main.temp}℃`;
+        weather.innerText = `${data.name}`+'\n'+`${data.weather[0].main} / ${data.main.temp} ℃`;
       });
   }
   function onGeoError() {
